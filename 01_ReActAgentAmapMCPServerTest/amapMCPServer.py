@@ -15,8 +15,8 @@ from typing import Dict, List, Any
 llm = init_chat_model(
     model="openai:deepseek-v3",
     temperature=0,
-    base_url="https://yunwu.ai/v1",
-    api_key="sk-1N7kCCLpLMs58uCPGt3hdcl0sttCxmU7OY1P8OMTpREAdEEK"
+    base_url="https://nangeai.top/v1",
+    api_key="sk-1N7kCCLpLMs58uCPGt333cl0sttCxmU7OY23238OMTpREAdEEK"
 )
 
 
