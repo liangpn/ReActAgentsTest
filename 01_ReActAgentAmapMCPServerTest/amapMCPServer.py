@@ -107,7 +107,7 @@ async def run_agent():
     client = MultiServerMCPClient({
         # 高德地图MCP Server
         "amap-amap-sse": {
-            "url": "https://mcp.amap.com/sse?key=9bc2bca80b67ecc80a4943313b6053cf",
+            "url": "https://mcp.amap.com/sse?key=9bc2bca8f0fb637ecc80a4943g3123b60s53cf",
             "transport": "sse",
         }
     })
