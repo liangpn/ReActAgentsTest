@@ -1,6 +1,6 @@
 # 1、项目介绍                  
 ## 1.1、主要内容
-本期视频为大家分享如何使用LangGraph集成MCP Server，本次选择使用高德地图的MCP Server进行测试                
+本期视频为大家分享使用LangGraph中预置的ReAct架构的Agent集成MCP Server，本次选择使用高德地图的MCP Server进行测试                
 
 ## 1.2 LangGraph介绍 
 LangGraph 是由 LangChain 团队开发的一个开源框架，旨在帮助开发者构建基于大型语言模型（LLM）的复杂、有状态、多主体的应用            
