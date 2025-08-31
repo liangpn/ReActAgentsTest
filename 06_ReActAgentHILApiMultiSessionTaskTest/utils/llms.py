@@ -57,12 +57,18 @@ MODEL_CONFIGS = {
         "api_key": "ollama",
         "chat_model": "llama3.1:8b",
         "embedding_model": "nomic-embed-text:latest"
+    },
+    "modelscope": {
+        "base_url": "https://api-inference.modelscope.cn/v1",
+        "api_key": "ms-7f3b0789-785d-4bd3-ba01-385761ccb6d0",
+        "chat_model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "embedding_model": "BAAI/bge-m3"
     }
 }
 
 
 # 默认配置
-DEFAULT_LLM_TYPE = "openai"
+DEFAULT_LLM_TYPE = "modelscope"
 DEFAULT_TEMPERATURE = 0
 
 
@@ -105,12 +111,13 @@ def initialize_llm(llm_type: str = DEFAULT_LLM_TYPE) -> tuple[ChatOpenAI, OpenAI
             max_retries=2  # 添加重试次数
         )
 
-        llm_embedding = OpenAIEmbeddings(
-            base_url=config["base_url"],
-            api_key=config["api_key"],
-            model=config["embedding_model"],
-            deployment=config["embedding_model"]
-        )
+        # llm_embedding = OpenAIEmbeddings(
+        #     base_url=config["base_url"],
+        #     api_key=config["api_key"],
+        #     model=config["embedding_model"],
+        #     deployment=config["embedding_model"]
+        # )
+        llm_embedding = None
 
         logger.info(f"成功初始化 {llm_type} LLM")
         return llm_chat, llm_embedding
